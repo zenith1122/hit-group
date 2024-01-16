@@ -2,21 +2,21 @@ import string
 from collections import Counter
 
 def get_top_words(file_path):
-    # Read the content of the text file
+    # For Reading the content of the text file
     with open(file_path, 'r', encoding='utf-8') as file:
         text = file.read()
 
-    # Remove punctuation and convert to lowercase
+    # Code for Remove punctuation and convert to lowercase
     translator = str.maketrans('', '', string.punctuation)
     text = text.translate(translator).lower()
 
-    # Split the text into words
+    # To Split the text into words
     words = text.split()
 
-    # Count the occurrences of each word
+    # For Count the occurrences of each word
     word_counts = Counter(words)
 
-    # Get the top 30 most common words
+    # To Get the top 30 most common words
     top_words = word_counts.most_common(30)
 
     return top_words
