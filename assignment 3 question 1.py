@@ -36,7 +36,7 @@ class TextEditorbyteam118(tk.Tk):
         file_path = filedialog.asksaveasfilename(defaultextension=".txt", filetypes=[("Text files", "*.txt")])
         if file_path:
             with open(file_path, "w") as file:
-                text_content = self.text_area.get("1.0", tkinter.END)
+                text_content = self.text_area.get("1.0", tk.END)
                 file.write(text_content)
 
 if __name__ == "__main__":
